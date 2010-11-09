@@ -6,45 +6,53 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title><%= configatron.site_name %></title>
-	
-	<%= stylesheet_link_merged :admin %>
+
+	<%= stylesheet_link_merged :base %>
   	<%= javascript_include_merged :base %>
+	<%= stylesheet_link_tag 'mobile' if mobile_device? %>
   
 </head>
 
 <body>
 
-  <div id="header">
-    <div id="global_links">
-      <%= render :partial => 'shared/global_links' %>
-    </div>
-    <h1><%= configatron.site_name %></h1>
+ 	<div class="wrapper">
 
-    <div id="tabs">
-      <%= render :partial => 'admin/shared/tabs' %>
-    </div>
-  </div>
+			<h1 class="logo"><%= configatron.site_name %></h1>
+			<p class="txt_right"><%= render :partial => 'shared/global_links' %></p>
 
-  <div id="main">
+		<!-- Navigation -->
 
-    <div id="left">
-	  <%= flash_message %>
+			<div class="navigation">
+					<ul>
+						<%= render :partial => 'admin/shared/tabs' %>
+					</ul>
 
-      <h2 class="head"><%= yield_or_default yield(:header), "Use 'content_for :header do; end' in your view to set this title" %></h2>
+					<div id="searchform">
+						<form method="get" action="">
+						<input type="text" value="Search..." class="search_box" name="search" onclick="this.value='';"  />
+						<input type="submit" class="search_btn" value="SEARCH" />
+						</form>
+					</div>
 
-      <div id="screen">
-        <%= yield %>
-      </div>
-    </div>
-    <div id="right">
-      <%= yield_or_default(yield(:sidebar)) %>
-    </div>
-  </div>
-  <div id="footer">
-    <%= configatron.site_name %> by <%= configatron.company_name %><br />
-	Copyright © <%= configatron.company_name %>
-  </div>
+			</div>
+
+			<div class="clear"></div>
 
 
+			<div class="content">
+
+      	
+	<%= render :partial => "shared/announcements" unless announcements_for_display.empty? -%>
+	<%= flash_message %>
+
+    <h2 class="head"><%= yield_or_default yield(:header), "Use 'content_for :header do; end' in your view to set this title" %></h2>
+
+    <%= yield %>
+
+	</div>
+
+    <!-- <%= yield_or_default(yield(:sidebar)) %> -->
+    	<p class="footer"><a href="#">ADVANCED  SEARCH</a> <span class="v_line"> |</span> <a href="#">LOGOUT</a></p>		
+	</div>
 </body>
 </html>

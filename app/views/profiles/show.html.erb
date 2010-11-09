@@ -7,15 +7,19 @@
 <% else -%>	
 	<% content_for :header do -%>
 		<% if current_user == @user -%>
-			My Account
+			<div class="in">My Account</div>
 		<% else -%>
 			Profile for <%= @user.login %>
 		<% end -%>
 	<% end -%>
+	
+	<div class="in">
 	
 	<%= render :partial => 'profiles/my_account' if current_user == @user %>
 	
 	<%= render :partial => 'profiles/account_details' if current_user == @user %>
 	
 	<%= render :partial => 'profiles/profile_details' %>
+	</div>
+	
 <% end -%>

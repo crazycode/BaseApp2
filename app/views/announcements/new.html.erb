@@ -1,7 +1,8 @@
 <% content_for :header do -%>
-	Announcements
+	<h2 class="in">Announcements</h2>
 <% end -%>
 
+<div class="in forms">
 <% form_for(@announcement) do |f| %>
   <%= f.error_messages %>
 
@@ -22,8 +23,9 @@
     <%= f.datetime_select :ends_at %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Create', :class => 'com_btn' %>
   </p>
 <% end %>
+</div>
 
 <%= link_to 'Back', announcements_path %>

@@ -1,5 +1,6 @@
-<h3>Account details</h3>
-<table class="overview">
+<h3 class="in">Account details</h3>
+<div class="in">			
+	<table width="850" border="0" cellspacing="0" cellpadding="10" class="table_main" >
 	<%= cell "Login", h(@user.login) %>
 	
 	<% if ! @user.not_using_openid? %>
@@ -20,3 +21,4 @@
 	<%= cell "Account created", @user.created_at.to_s(:long) %>
 	<%= cell "Last updated", @user.updated_at.to_s(:long) %>
 </table>
+</div>
