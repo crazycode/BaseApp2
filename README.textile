@@ -79,8 +79,7 @@ h2. Features
 h2. Screenshots
 
 Desktop Version
-<img src="http://cloud.dannyweb.net/c2abfcdedd3acbfac76c/content" alt="BaseApp2" width="800px"/>
-<img src="http://cloud.dannyweb.net/19480181c8648caf8f44/content" alt="BaseApp2" width="800px"/>
+<img src="http://cloud.dannyweb.net/4iKJ" width="800px"/>
 
 h2. Credits
 
