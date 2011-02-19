@@ -76,11 +76,6 @@ h2. Features
 ** Auto detect mobile users/visitors and display different views.
 ** Based on the JQTouch framework, making it easy to theme.
 
-h2. Screenshots
-
-Desktop Version
-<img src="http://cloud.dannyweb.net/4iKJ" width="800px"/>
-
 h2. Credits
 
 BaseApp2 is developed by "Danny McClelland":http://www.dannyweb.net, based on the BaseApp application.
