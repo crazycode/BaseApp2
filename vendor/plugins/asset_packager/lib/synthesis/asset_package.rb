@@ -1,5 +1,12 @@
 require 'yaml'
 
+# hack for sources_from_targets, it maybe use String.to_a.
+class String
+  def to_a
+    [self]
+  end
+end
+
 module Synthesis
 
   module Compiler
