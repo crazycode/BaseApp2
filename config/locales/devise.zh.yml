@@ -1,0 +1,39 @@
+--- 
+zh: 
+  devise: 
+    confirmations: 
+      confirmed: 您的帐户已成功确认。您现在已登录
+      send_instructions: 您将在几分钟内收到关于如何确认帐户的电子邮件。
+    failure: 
+      inactive: 您的帐户没有激活。
+      invalid: 无效的电子邮件或密码。
+      invalid_token: 无效的验证令牌。
+      locked: 您的帐户已被锁定。
+      timeout: 您的会话已过期，请再次登录以继续。
+      unauthenticated: 您需要登录或注册，然后再继续了。
+      unconfirmed: 你必须确认您的帐户，然后再继续。
+    mailer: 
+      confirmation_instructions: 
+        subject: 确认指示
+      reset_password_instructions: 
+        subject: 重设密码的说明
+      unlock_instructions: 
+        subject: 解锁指令
+    passwords: 
+      send_instructions: 您将收到关于如何重置您的密码几分钟指示的电子邮件。
+      updated: 您的密码修改成功。您现在已登录
+    registrations: 
+      destroyed: 再见！您的帐户已成功取消。我们希望很快再见到你。
+      signed_up: 您已注册成功。如果启用，确认被发送到您的电子邮件。
+      updated: 您成功地更新您的帐户。
+    unlocks: 
+      send_instructions: 您将收到有关如何在几分钟内解除您的电子邮件帐户的指示。
+      unlocked: 您的帐户已成功地解锁。您现在已登录
+    user_sessions: 
+      signed_in: 签名成功。
+      signed_out: 签名获得成功。
+  errors: 
+    messages: 
+      already_confirmed: 已确认
+      not_found: 未找到
+      not_locked: 未锁定
