@@ -24,7 +24,7 @@ gem "gravatar_image_tag"
 
 group :development do
   # To use debugger
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
   gem 'sqlite3-ruby', :require => "sqlite3"
 end
 
